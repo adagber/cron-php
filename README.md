@@ -3,19 +3,19 @@
 
 Para realizar esta prueba he decidido utilizar el lenguaje PHP combinado con PHPUnit para el testeo del código.
 
-En la arte frontend he utilizado el framework bootstrap y javascript y ajax para validación y envío de los datos del formulario.
+En la parte frontend he utilizado el framework bootstrap y javascript y ajax para validación y envío de los datos del formulario.
 
 El motivo de utilizar esta pila tecnológica simplemente es porque es la que más domino y más experiencia tengo.
 
 ##1. Instalación
 ----------------
-El código del proyecto se encuentra en github. Sólo hay que clonarlo y hacer una instalación muy sencilla que se explica a continuación:
+El código del proyecto se encuentra en github. Solamente hay que clonarlo y hacer una instalación muy sencilla que se explica a continuación:
 
 - Clonar el proyecto
 `git clone https://github.com/adagber/cron-php.git && cd cron-php`
 
 
-- Instalar las dependencias con *composer*. Si no tienes composer instalado ver la [guía de instalación de composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos).
+- Instalar las dependencias con *composer*. Si no tienes composer instalado puedes ver la [guía de instalación de composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos).
 `composer install`
 
 - Crear el directorio *var* dónde se va a crear ficheros y hacer una copia del fichero de distribución de crontab
@@ -26,7 +26,7 @@ El código del proyecto se encuentra en github. Sólo hay que clonarlo y hacer u
 
 - Si se quiere tener frontend para editar los crontabs hay que configurar tu servidor web para que apunte a la carpeta *public* del proyecto
 
-Y eso es todo!
+¡Y eso es todo!
 
 Una vez lo tengamos todo listo y configurado vamos a ver cómo funciona todo esto.
 
@@ -44,11 +44,13 @@ Este comando hay que ejecutarlo periódicamente cada minuto.
 Para ello añade a tu crontab la siguente linea:
 `* * * * * path/to/phpbin path/to/php-cron-project/bin/cron 1>> /dev/null 2>&1`
 
-Y listo! Fácil verdad.
+¡Y listo! Fácil, verdad.
 
-Pero qué ocurre si en nuestro servidor **no** tenemos acceso al crontab del sistema. Creo que la gracia d eeste desafío es montar uno sin la necesidad de utilizar el de Linux.
+¿Pero qué ocurre si en nuestro servidor **no** tenemos acceso al crontab del sistema?. 
 
-Pues estás de suerte. Sigue leyendo 😉
+Creo que la gracia de este desafío es montar uno sin la necesidad de utilizar el de Linux.
+
+Pues estás de suerte. Sigue leyendo 😉.
 
 **2.2 Ejecutar el propio demonio de php-cron**
 
@@ -57,7 +59,7 @@ Para activarlo solo tienes que ejecutar el siguiente comando:
 
 Esto ejecuta un servicio que carga todas las reglas (crontab) establecidas (que veremos después) y se queda pendiente a ejecutar cada una de las tareas que le toque cada momento.
 
-Para detenerlo sólo tienes que pulsar `Crtl + C`
+Para detenerlo solo tienes que pulsar `Crtl + C`
 
 ##3. Estableciendo las tareas
 -----------------------------
@@ -78,19 +80,19 @@ Cuando hay cambios verás en la consola del demonio un mensaje como este:
 ##4. Usando el frontend
 -----------------------
 
-Vale. Esto está muy bien. Pero que ocurre si quiero cambiar el fichero crontab sin editar el fichero.
+Vale. Esto está muy bien. Pero, ¿qué ocurre si quiero cambiar el fichero crontab sin editar el fichero?
 
 No hay problema. Para esto tienes el frontend. Un pequeño acceso vía web donde podrás modificar el crontab con un sencillo formulario.
 
-Para utilizarlo deberás de configurar algún servidor web y que apubte al directorio */public* tal y como se explicó en la instalación.
+Para utilizarlo deberás configurar algún servidor web y que apunte al directorio */public* tal y como se explicó en el proceso de instalación.
 
-Después sólo tienes que ir al navegador y usar la dirección URL. En mi caso es esta:
+Después solo tienes que ir al navegador y usar la dirección URL. En mi caso es ésta:
 `https://127.0.0.1:8000/`
 
 ##5. Viendo la salida (output)
 ------------------------------
 
-Cualquier cosa que salga por la salida estándar de las tareas ejecutadas, se guarda en un log que se encuentra en *var/output.log*. Este log sólo guarda la salida de la ultima tarea ejecutada, así que no tienes que preocuparte por si crece el fichero demasiado.
+Cualquier cosa que salga por la salida estándar de las tareas ejecutadas, se guarda en un log que se encuentra en *var/output.log*. Este log solo guarda la salida de la última tarea ejecutada, así que no tienes que preocuparte por si crece el fichero demasiado.
 
 ##6. Test
 ---------
@@ -107,11 +109,11 @@ Para ejecutar los test solo hay que escribir lo siguiente desde la raíz del pro
 
 Y esto ha sido todo.
 
-Creo que la prueba tiene un poco de todo y así podéis hacer una idea de mi potencial. 
+Creo que la prueba tiene un poco de todo y así os podéis hacer una idea de mi potencial. 
 
-Evidentemente esto no es una solución seria para llevarla a un sistema en producción. Creo que el objetivo no era ese. Sino mostrar un poco las habilidades de programación tanto *backend*  como *frontend* y un poquito de programación en terminal y acabando por los test unitarios.
+Evidentemente ésto no es una solución seria para llevarla a un sistema en producción. Creo que el objetivo no era ese, sino mostrar un poco las habilidades de programación tanto *backend*  como *frontend* y un poco de programación en terminal y acabando por los test unitarios.
 
-Con todo esto creo que mi solución a este desafío es una solución muy completa y con un poquito de todo.
+Con todo esto creo que mi solución a este desafío es una solución muy completa y con un poco de todo.
 
 ¡Espero que os guste!
 
