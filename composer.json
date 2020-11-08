@@ -1,0 +1,30 @@
+{
+    "name": "witrac/php-cron",
+    "description": "Implement a CRON replacement. The application must be able to take a configuration file (crontab style) and run commands on demand.",
+    "type": "library",
+    "require": {
+        "peppeocchi/php-cron-scheduler": "^3.1",
+        "mtdowling/cron-expression": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adolfo Agulló",
+            "email": "adagber@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+      "psr-4": {
+          "Vitrac\\PhpCron\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+          "Vitrac\\PhpCron\\Tests\\": "tests/"
+      }
+    }
+}

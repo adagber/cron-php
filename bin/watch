@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+namespace Vitrac\PhpCron;
+
+if (!in_array(PHP_SAPI, ['cli', 'phpdbg', 'embed'], true)) {
+    echo 'Warning: The console should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;
+}
+
+set_time_limit(0);
+
+require dirname(__DIR__).'/vendor/autoload.php';
+require dirname(__DIR__).'/app/files.php';
+
+// Creamos el planificador
+$scheduler = new Scheduler($cronFilename, $logFilename);
+$scheduler->loadConfig();
+
+printf('Executing cron daemon...'.PHP_EOL);
+$scheduler->watch(60);
