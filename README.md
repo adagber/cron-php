@@ -7,8 +7,8 @@ En la arte frontend he utilizado el framework bootstrap y javascript y ajax para
 
 El motivo de utilizar esta pila tecnológica simplemente es porque es la que más domino y más experiencia tengo.
 
-1. Instalación
---------------
+##1. Instalación
+----------------
 El código del proyecto se encuentra en github. Sólo hay que clonarlo y hacer una instalación muy sencilla que se explica a continuación:
 
 - Clonar el proyecto
@@ -30,8 +30,8 @@ Y eso es todo!
 
 Una vez lo tengamos todo listo y configurado vamos a ver cómo funciona todo esto.
 
-2. Cómo funciona
------------------
+##2. Cómo funciona
+-------------------
 
 Para que las tareas del crontab se ejecuten hay que activar el cron para ello tenemos dos opciones:
 
@@ -59,8 +59,8 @@ Esto ejecuta un servicio que carga todas las reglas (crontab) establecidas (que 
 
 Para detenerlo sólo tienes que pulsar `Crtl + C`
 
-3. Estableciendo las tareas
----------------------------
+##3. Estableciendo las tareas
+-----------------------------
 
 En linux mendiante el comando *crontab* accedemos a un fichero de texto para establecer la planificación de las tareas.
 
@@ -75,8 +75,8 @@ La respuesta es **NO**. El demonio php-cron es lo suficientemente inteligente pa
 Cuando hay cambios verás en la consola del demonio un mensaje como este:
 `-- The crontab file has changed, the new rules are loaded --`
 
-4. Usando el frontend
----------------------
+##4. Usando el frontend
+-----------------------
 
 Vale. Esto está muy bien. Pero que ocurre si quiero cambiar el fichero crontab sin editar el fichero.
 
@@ -87,13 +87,13 @@ Para utilizarlo deberás de configurar algún servidor web y que apubte al direc
 Después sólo tienes que ir al navegador y usar la dirección URL. En mi caso es esta:
 `https://127.0.0.1:8000/`
 
-5. Viendo la salida (output)
-----------------------------
+##5. Viendo la salida (output)
+------------------------------
 
 Cualquier cosa que salga por la salida estándar de las tareas ejecutadas, se guarda en un log que se encuentra en *var/output.log*. Este log sólo guarda la salida de la ultima tarea ejecutada, así que no tienes que preocuparte por si crece el fichero demasiado.
 
-6. Test
--------
+##6. Test
+---------
 
 La aplicación dispone de varios test para darle fiabilidad y escalabilidad al proyecto.
 
@@ -102,8 +102,8 @@ Se ha utilizado la librería de *PHPUnit 9.3*
 Para ejecutar los test solo hay que escribir lo siguiente desde la raíz del proyecto:
 `vendor/bin/phpunit`
 
-7. Conclusiones
----------------
+##7. Conclusiones
+-----------------
 
 Y esto ha sido todo.
 
